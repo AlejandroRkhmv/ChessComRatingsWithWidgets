@@ -1,0 +1,897 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2106A46329EEB6C60065C33A /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106A46229EEB6C60065C33A /* ArchiveView.swift */; };
+		2106A46A29EEB7D60065C33A /* ArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106A46929EEB7D60065C33A /* ArchiveViewModel.swift */; };
+		2106A46C29EEB7E70065C33A /* ArchiveApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106A46B29EEB7E70065C33A /* ArchiveApi.swift */; };
+		2106A46E29EEC9E50065C33A /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106A46D29EEC9E50065C33A /* Archive.swift */; };
+		210BFE9D29EEFB8E00AAF4A7 /* GamesForMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210BFE9C29EEFB8E00AAF4A7 /* GamesForMonthView.swift */; };
+		2158BAA129EAF2F4001300ED /* MVVMArchitecture2AsyncAvaitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAA029EAF2F4001300ED /* MVVMArchitecture2AsyncAvaitApp.swift */; };
+		2158BAA329EAF2F4001300ED /* ChessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAA229EAF2F4001300ED /* ChessView.swift */; };
+		2158BAA529EAF2F4001300ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2158BAA429EAF2F4001300ED /* Assets.xcassets */; };
+		2158BAA829EAF2F4001300ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2158BAA729EAF2F4001300ED /* Preview Assets.xcassets */; };
+		2158BAAF29EB0911001300ED /* RatingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAAE29EB0911001300ED /* RatingApi.swift */; };
+		2158BAB129EB091F001300ED /* ChessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAB029EB091F001300ED /* ChessViewModel.swift */; };
+		2158BAB729EB1750001300ED /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAB629EB1750001300ED /* SignInView.swift */; };
+		2158BABA29EB1FA1001300ED /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAB929EB1FA1001300ED /* NavigationState.swift */; };
+		2158BABC29EB202D001300ED /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BABB29EB202D001300ED /* NavigationDestination.swift */; };
+		2158BABE29EB2261001300ED /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BABD29EB2261001300ED /* ContainerView.swift */; };
+		2158BAC029EB2B2B001300ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BABF29EB2B2B001300ED /* NetworkService.swift */; };
+		2158BAC329EB2DA1001300ED /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAC229EB2DA1001300ED /* DateCreator.swift */; };
+		2158BAC529EB2F50001300ED /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAC429EB2F50001300ED /* UserApi.swift */; };
+		2158BAC729EB303B001300ED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAC629EB303B001300ED /* User.swift */; };
+		2158BAC929EB3125001300ED /* ModelsCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAC829EB3125001300ED /* ModelsCreator.swift */; };
+		2158BACB29EB3195001300ED /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BACA29EB3195001300ED /* Rating.swift */; };
+		2158BACD29EB36D0001300ED /* URLsCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BACC29EB36D0001300ED /* URLsCreator.swift */; };
+		2158BACF29EB434F001300ED /* ApiModelCreatorFromData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BACE29EB434F001300ED /* ApiModelCreatorFromData.swift */; };
+		2158BAD129EB46FF001300ED /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAD029EB46FF001300ED /* Errors.swift */; };
+		2193AAC429F296AB001D04B4 /* PartyForWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2193AAC329F296AB001D04B4 /* PartyForWidget.swift */; };
+		2193AAC529F298F7001D04B4 /* PartyForWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2193AAC329F296AB001D04B4 /* PartyForWidget.swift */; };
+		2193AAC729F2ACA0001D04B4 /* MovesInGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2193AAC629F2ACA0001D04B4 /* MovesInGameViewModel.swift */; };
+		2193AACB29F2AEFA001D04B4 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 2193AACA29F2AEFA001D04B4 /* Swinject */; };
+		2193AAF029F2FAAE001D04B4 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2193AAEF29F2FAAE001D04B4 /* Dependencies.swift */; };
+		21C09C6B29EFE2BC00327555 /* GamesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C6A29EFE2BC00327555 /* GamesApi.swift */; };
+		21C09C6D29EFE2D200327555 /* GamesForMonthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C6C29EFE2D200327555 /* GamesForMonthViewModel.swift */; };
+		21C09C7229EFE61600327555 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C7129EFE61600327555 /* Game.swift */; };
+		21C09C7529EFFC9400327555 /* MovesInGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C7429EFFC9400327555 /* MovesInGameView.swift */; };
+		21C09C7829F0688C00327555 /* CorrespondencePartyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C7729F0688C00327555 /* CorrespondencePartyApi.swift */; };
+		21C09C7B29F192B800327555 /* CorrespondenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C7A29F192B800327555 /* CorrespondenceView.swift */; };
+		21C09C7F29F197E400327555 /* CorrespondenceParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C7E29F197E400327555 /* CorrespondenceParty.swift */; };
+		21C09C8129F1991C00327555 /* CorrespondenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C8029F1991C00327555 /* CorrespondenceViewModel.swift */; };
+		21D7673A29F1E1C7007114F4 /* RatingEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D7673929F1E1C7007114F4 /* RatingEnum.swift */; };
+		21D7673B29F1E84B007114F4 /* RatingEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D7673929F1E1C7007114F4 /* RatingEnum.swift */; };
+		21E0FB4729EC558E0004347E /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E0FB4629EC558E0004347E /* RatingsView.swift */; };
+		21E1289F29ED751B00890AF6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E1289E29ED751B00890AF6 /* WidgetKit.framework */; };
+		21E128A129ED751B00890AF6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E128A029ED751B00890AF6 /* SwiftUI.framework */; };
+		21E128A429ED751B00890AF6 /* ChessRatingWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E128A329ED751B00890AF6 /* ChessRatingWidgetBundle.swift */; };
+		21E128A629ED751B00890AF6 /* ChessRatingWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E128A529ED751B00890AF6 /* ChessRatingWidgetLiveActivity.swift */; };
+		21E128A829ED751B00890AF6 /* ChessRatingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E128A729ED751B00890AF6 /* ChessRatingWidget.swift */; };
+		21E128AA29ED751C00890AF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21E128A929ED751C00890AF6 /* Assets.xcassets */; };
+		21E128AE29ED751C00890AF6 /* ChessRatingWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 21E1289C29ED751B00890AF6 /* ChessRatingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		21E128BA29ED882B00890AF6 /* UserForWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E128B729ED826100890AF6 /* UserForWidgets.swift */; };
+		21E128BB29ED883200890AF6 /* UserForWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E128B729ED826100890AF6 /* UserForWidgets.swift */; };
+		21E128BD29ED889400890AF6 /* DecoderEncoderSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E128BC29ED889400890AF6 /* DecoderEncoderSupport.swift */; };
+		21E128BF29ED8D3400890AF6 /* DecoderEncoderSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E128BC29ED889400890AF6 /* DecoderEncoderSupport.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21E128AC29ED751C00890AF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2158BA9529EAF2F4001300ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21E1289B29ED751B00890AF6;
+			remoteInfo = ChessRatingWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		21E128AF29ED751C00890AF6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				21E128AE29ED751C00890AF6 /* ChessRatingWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2106A46229EEB6C60065C33A /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
+		2106A46929EEB7D60065C33A /* ArchiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewModel.swift; sourceTree = "<group>"; };
+		2106A46B29EEB7E70065C33A /* ArchiveApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveApi.swift; sourceTree = "<group>"; };
+		2106A46D29EEC9E50065C33A /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
+		210BFE9C29EEFB8E00AAF4A7 /* GamesForMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesForMonthView.swift; sourceTree = "<group>"; };
+		2158BA9D29EAF2F4001300ED /* MVVMArchitecture2AsyncAvait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMArchitecture2AsyncAvait.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2158BAA029EAF2F4001300ED /* MVVMArchitecture2AsyncAvaitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMArchitecture2AsyncAvaitApp.swift; sourceTree = "<group>"; };
+		2158BAA229EAF2F4001300ED /* ChessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessView.swift; sourceTree = "<group>"; };
+		2158BAA429EAF2F4001300ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2158BAA729EAF2F4001300ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2158BAAE29EB0911001300ED /* RatingApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingApi.swift; sourceTree = "<group>"; };
+		2158BAB029EB091F001300ED /* ChessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessViewModel.swift; sourceTree = "<group>"; };
+		2158BAB629EB1750001300ED /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		2158BAB929EB1FA1001300ED /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		2158BABB29EB202D001300ED /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		2158BABD29EB2261001300ED /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		2158BABF29EB2B2B001300ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2158BAC229EB2DA1001300ED /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
+		2158BAC429EB2F50001300ED /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		2158BAC629EB303B001300ED /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2158BAC829EB3125001300ED /* ModelsCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsCreator.swift; sourceTree = "<group>"; };
+		2158BACA29EB3195001300ED /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		2158BACC29EB36D0001300ED /* URLsCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLsCreator.swift; sourceTree = "<group>"; };
+		2158BACE29EB434F001300ED /* ApiModelCreatorFromData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModelCreatorFromData.swift; sourceTree = "<group>"; };
+		2158BAD029EB46FF001300ED /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		2193AAC329F296AB001D04B4 /* PartyForWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyForWidget.swift; sourceTree = "<group>"; };
+		2193AAC629F2ACA0001D04B4 /* MovesInGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesInGameViewModel.swift; sourceTree = "<group>"; };
+		2193AAEF29F2FAAE001D04B4 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		21C09C6A29EFE2BC00327555 /* GamesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesApi.swift; sourceTree = "<group>"; };
+		21C09C6C29EFE2D200327555 /* GamesForMonthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesForMonthViewModel.swift; sourceTree = "<group>"; };
+		21C09C7129EFE61600327555 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		21C09C7429EFFC9400327555 /* MovesInGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesInGameView.swift; sourceTree = "<group>"; };
+		21C09C7729F0688C00327555 /* CorrespondencePartyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondencePartyApi.swift; sourceTree = "<group>"; };
+		21C09C7A29F192B800327555 /* CorrespondenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondenceView.swift; sourceTree = "<group>"; };
+		21C09C7E29F197E400327555 /* CorrespondenceParty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondenceParty.swift; sourceTree = "<group>"; };
+		21C09C8029F1991C00327555 /* CorrespondenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondenceViewModel.swift; sourceTree = "<group>"; };
+		21D7673929F1E1C7007114F4 /* RatingEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingEnum.swift; sourceTree = "<group>"; };
+		21E0FB4629EC558E0004347E /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		21E1289C29ED751B00890AF6 /* ChessRatingWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ChessRatingWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		21E1289E29ED751B00890AF6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		21E128A029ED751B00890AF6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		21E128A329ED751B00890AF6 /* ChessRatingWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessRatingWidgetBundle.swift; sourceTree = "<group>"; };
+		21E128A529ED751B00890AF6 /* ChessRatingWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessRatingWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		21E128A729ED751B00890AF6 /* ChessRatingWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessRatingWidget.swift; sourceTree = "<group>"; };
+		21E128A929ED751C00890AF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21E128AB29ED751C00890AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21E128B529ED760200890AF6 /* ChessRatingWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChessRatingWidgetExtension.entitlements; sourceTree = "<group>"; };
+		21E128B629ED763A00890AF6 /* MVVMArchitecture2AsyncAvait.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MVVMArchitecture2AsyncAvait.entitlements; sourceTree = "<group>"; };
+		21E128B729ED826100890AF6 /* UserForWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserForWidgets.swift; sourceTree = "<group>"; };
+		21E128BC29ED889400890AF6 /* DecoderEncoderSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderEncoderSupport.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2158BA9A29EAF2F4001300ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2193AACB29F2AEFA001D04B4 /* Swinject in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21E1289929ED751B00890AF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21E128A129ED751B00890AF6 /* SwiftUI.framework in Frameworks */,
+				21E1289F29ED751B00890AF6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2106A46129EEB6AC0065C33A /* ArchiveModule */ = {
+			isa = PBXGroup;
+			children = (
+				2106A46729EEB7980065C33A /* Model */,
+				2106A46629EEB78F0065C33A /* View */,
+				2106A46829EEB7A30065C33A /* ViewModel */,
+			);
+			path = ArchiveModule;
+			sourceTree = "<group>";
+		};
+		2106A46429EEB7650065C33A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				2158BAB929EB1FA1001300ED /* NavigationState.swift */,
+				2158BABB29EB202D001300ED /* NavigationDestination.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		2106A46529EEB7800065C33A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2158BABD29EB2261001300ED /* ContainerView.swift */,
+				2158BAB629EB1750001300ED /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2106A46629EEB78F0065C33A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2106A46229EEB6C60065C33A /* ArchiveView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2106A46729EEB7980065C33A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2106A46B29EEB7E70065C33A /* ArchiveApi.swift */,
+				2106A46D29EEC9E50065C33A /* Archive.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2106A46829EEB7A30065C33A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2106A46929EEB7D60065C33A /* ArchiveViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		210BFE9B29EEFB0E00AAF4A7 /* MonthGamesModule */ = {
+			isa = PBXGroup;
+			children = (
+				21C09C6E29EFE2DF00327555 /* Model */,
+				21C09C6F29EFE2E500327555 /* View */,
+				21C09C7029EFE2EA00327555 /* ViewModel */,
+			);
+			path = MonthGamesModule;
+			sourceTree = "<group>";
+		};
+		2158BA9429EAF2F4001300ED = {
+			isa = PBXGroup;
+			children = (
+				21E128B529ED760200890AF6 /* ChessRatingWidgetExtension.entitlements */,
+				2158BA9F29EAF2F4001300ED /* MVVMArchitecture2AsyncAvait */,
+				21E128A229ED751B00890AF6 /* ChessRatingWidget */,
+				21E1289D29ED751B00890AF6 /* Frameworks */,
+				2158BA9E29EAF2F4001300ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2158BA9E29EAF2F4001300ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2158BA9D29EAF2F4001300ED /* MVVMArchitecture2AsyncAvait.app */,
+				21E1289C29ED751B00890AF6 /* ChessRatingWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2158BA9F29EAF2F4001300ED /* MVVMArchitecture2AsyncAvait */ = {
+			isa = PBXGroup;
+			children = (
+				21E128B629ED763A00890AF6 /* MVVMArchitecture2AsyncAvait.entitlements */,
+				2158BAA029EAF2F4001300ED /* MVVMArchitecture2AsyncAvaitApp.swift */,
+				2158BAC129EB2B32001300ED /* Servises */,
+				2106A46429EEB7650065C33A /* Navigation */,
+				2158BAB829EB1F83001300ED /* SignInModule */,
+				2158BAB229EB092A001300ED /* ChessModule */,
+				21C09C7929F1927100327555 /* CorrespondenceModule */,
+				2106A46129EEB6AC0065C33A /* ArchiveModule */,
+				210BFE9B29EEFB0E00AAF4A7 /* MonthGamesModule */,
+				21C09C7329EFFC6800327555 /* MovesInGameModule */,
+				2158BAA429EAF2F4001300ED /* Assets.xcassets */,
+				2158BAA629EAF2F4001300ED /* Preview Content */,
+			);
+			path = MVVMArchitecture2AsyncAvait;
+			sourceTree = "<group>";
+		};
+		2158BAA629EAF2F4001300ED /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2158BAA729EAF2F4001300ED /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2158BAB229EB092A001300ED /* ChessModule */ = {
+			isa = PBXGroup;
+			children = (
+				2158BAB429EB09C7001300ED /* Model */,
+				2158BAB329EB097A001300ED /* View */,
+				2158BAB529EB09CF001300ED /* ViewModel */,
+			);
+			path = ChessModule;
+			sourceTree = "<group>";
+		};
+		2158BAB329EB097A001300ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2158BAA229EAF2F4001300ED /* ChessView.swift */,
+				21E0FB4629EC558E0004347E /* RatingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2158BAB429EB09C7001300ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2158BAAE29EB0911001300ED /* RatingApi.swift */,
+				2158BACA29EB3195001300ED /* Rating.swift */,
+				2158BAC429EB2F50001300ED /* UserApi.swift */,
+				2158BAC629EB303B001300ED /* User.swift */,
+				21E128B729ED826100890AF6 /* UserForWidgets.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2158BAB529EB09CF001300ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2158BAB029EB091F001300ED /* ChessViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2158BAB829EB1F83001300ED /* SignInModule */ = {
+			isa = PBXGroup;
+			children = (
+				2106A46529EEB7800065C33A /* Views */,
+			);
+			path = SignInModule;
+			sourceTree = "<group>";
+		};
+		2158BAC129EB2B32001300ED /* Servises */ = {
+			isa = PBXGroup;
+			children = (
+				2158BABF29EB2B2B001300ED /* NetworkService.swift */,
+				2158BACE29EB434F001300ED /* ApiModelCreatorFromData.swift */,
+				2158BAC229EB2DA1001300ED /* DateCreator.swift */,
+				2158BAC829EB3125001300ED /* ModelsCreator.swift */,
+				2158BACC29EB36D0001300ED /* URLsCreator.swift */,
+				2158BAD029EB46FF001300ED /* Errors.swift */,
+				21E128BC29ED889400890AF6 /* DecoderEncoderSupport.swift */,
+				21D7673929F1E1C7007114F4 /* RatingEnum.swift */,
+				2193AAEF29F2FAAE001D04B4 /* Dependencies.swift */,
+			);
+			path = Servises;
+			sourceTree = "<group>";
+		};
+		2193AAC829F2ACB6001D04B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2193AAC629F2ACA0001D04B4 /* MovesInGameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		21C09C6E29EFE2DF00327555 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21C09C6A29EFE2BC00327555 /* GamesApi.swift */,
+				21C09C7129EFE61600327555 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21C09C6F29EFE2E500327555 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				210BFE9C29EEFB8E00AAF4A7 /* GamesForMonthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21C09C7029EFE2EA00327555 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				21C09C6C29EFE2D200327555 /* GamesForMonthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		21C09C7329EFFC6800327555 /* MovesInGameModule */ = {
+			isa = PBXGroup;
+			children = (
+				21C09C7629F0559100327555 /* View */,
+				2193AAC829F2ACB6001D04B4 /* ViewModel */,
+			);
+			path = MovesInGameModule;
+			sourceTree = "<group>";
+		};
+		21C09C7629F0559100327555 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21C09C7429EFFC9400327555 /* MovesInGameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21C09C7929F1927100327555 /* CorrespondenceModule */ = {
+			isa = PBXGroup;
+			children = (
+				21C09C7D29F1966F00327555 /* Model */,
+				21C09C7C29F1966500327555 /* View */,
+				21C09C8229F1992000327555 /* ViewModel */,
+			);
+			path = CorrespondenceModule;
+			sourceTree = "<group>";
+		};
+		21C09C7C29F1966500327555 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21C09C7A29F192B800327555 /* CorrespondenceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21C09C7D29F1966F00327555 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21C09C7729F0688C00327555 /* CorrespondencePartyApi.swift */,
+				21C09C7E29F197E400327555 /* CorrespondenceParty.swift */,
+				2193AAC329F296AB001D04B4 /* PartyForWidget.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21C09C8229F1992000327555 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				21C09C8029F1991C00327555 /* CorrespondenceViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		21E1289D29ED751B00890AF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21E1289E29ED751B00890AF6 /* WidgetKit.framework */,
+				21E128A029ED751B00890AF6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21E128A229ED751B00890AF6 /* ChessRatingWidget */ = {
+			isa = PBXGroup;
+			children = (
+				21E128A329ED751B00890AF6 /* ChessRatingWidgetBundle.swift */,
+				21E128A529ED751B00890AF6 /* ChessRatingWidgetLiveActivity.swift */,
+				21E128A729ED751B00890AF6 /* ChessRatingWidget.swift */,
+				21E128A929ED751C00890AF6 /* Assets.xcassets */,
+				21E128AB29ED751C00890AF6 /* Info.plist */,
+			);
+			path = ChessRatingWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2158BA9C29EAF2F4001300ED /* MVVMArchitecture2AsyncAvait */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2158BAAB29EAF2F4001300ED /* Build configuration list for PBXNativeTarget "MVVMArchitecture2AsyncAvait" */;
+			buildPhases = (
+				2158BA9929EAF2F4001300ED /* Sources */,
+				2158BA9A29EAF2F4001300ED /* Frameworks */,
+				2158BA9B29EAF2F4001300ED /* Resources */,
+				21E128AF29ED751C00890AF6 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21E128AD29ED751C00890AF6 /* PBXTargetDependency */,
+			);
+			name = MVVMArchitecture2AsyncAvait;
+			packageProductDependencies = (
+				2193AACA29F2AEFA001D04B4 /* Swinject */,
+			);
+			productName = MVVMArchitecture2AsyncAvait;
+			productReference = 2158BA9D29EAF2F4001300ED /* MVVMArchitecture2AsyncAvait.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21E1289B29ED751B00890AF6 /* ChessRatingWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21E128B229ED751C00890AF6 /* Build configuration list for PBXNativeTarget "ChessRatingWidgetExtension" */;
+			buildPhases = (
+				21E1289829ED751B00890AF6 /* Sources */,
+				21E1289929ED751B00890AF6 /* Frameworks */,
+				21E1289A29ED751B00890AF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChessRatingWidgetExtension;
+			productName = ChessRatingWidgetExtension;
+			productReference = 21E1289C29ED751B00890AF6 /* ChessRatingWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2158BA9529EAF2F4001300ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					2158BA9C29EAF2F4001300ED = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					21E1289B29ED751B00890AF6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 2158BA9829EAF2F4001300ED /* Build configuration list for PBXProject "MVVMArchitecture2AsyncAvait" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2158BA9429EAF2F4001300ED;
+			packageReferences = (
+				2193AAC929F2AEFA001D04B4 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
+			productRefGroup = 2158BA9E29EAF2F4001300ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2158BA9C29EAF2F4001300ED /* MVVMArchitecture2AsyncAvait */,
+				21E1289B29ED751B00890AF6 /* ChessRatingWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2158BA9B29EAF2F4001300ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2158BAA829EAF2F4001300ED /* Preview Assets.xcassets in Resources */,
+				2158BAA529EAF2F4001300ED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21E1289A29ED751B00890AF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21E128AA29ED751C00890AF6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2158BA9929EAF2F4001300ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2158BAAF29EB0911001300ED /* RatingApi.swift in Sources */,
+				2158BACF29EB434F001300ED /* ApiModelCreatorFromData.swift in Sources */,
+				2158BABC29EB202D001300ED /* NavigationDestination.swift in Sources */,
+				2158BABA29EB1FA1001300ED /* NavigationState.swift in Sources */,
+				21C09C6B29EFE2BC00327555 /* GamesApi.swift in Sources */,
+				2193AAF029F2FAAE001D04B4 /* Dependencies.swift in Sources */,
+				21C09C8129F1991C00327555 /* CorrespondenceViewModel.swift in Sources */,
+				21E128BA29ED882B00890AF6 /* UserForWidgets.swift in Sources */,
+				21C09C7B29F192B800327555 /* CorrespondenceView.swift in Sources */,
+				2158BAA329EAF2F4001300ED /* ChessView.swift in Sources */,
+				2158BAC329EB2DA1001300ED /* DateCreator.swift in Sources */,
+				2106A46329EEB6C60065C33A /* ArchiveView.swift in Sources */,
+				2158BAC029EB2B2B001300ED /* NetworkService.swift in Sources */,
+				2193AAC729F2ACA0001D04B4 /* MovesInGameViewModel.swift in Sources */,
+				2193AAC429F296AB001D04B4 /* PartyForWidget.swift in Sources */,
+				2158BACB29EB3195001300ED /* Rating.swift in Sources */,
+				2106A46E29EEC9E50065C33A /* Archive.swift in Sources */,
+				21E128BD29ED889400890AF6 /* DecoderEncoderSupport.swift in Sources */,
+				21C09C6D29EFE2D200327555 /* GamesForMonthViewModel.swift in Sources */,
+				2106A46A29EEB7D60065C33A /* ArchiveViewModel.swift in Sources */,
+				210BFE9D29EEFB8E00AAF4A7 /* GamesForMonthView.swift in Sources */,
+				2158BABE29EB2261001300ED /* ContainerView.swift in Sources */,
+				2158BAB129EB091F001300ED /* ChessViewModel.swift in Sources */,
+				2106A46C29EEB7E70065C33A /* ArchiveApi.swift in Sources */,
+				21D7673A29F1E1C7007114F4 /* RatingEnum.swift in Sources */,
+				21C09C7529EFFC9400327555 /* MovesInGameView.swift in Sources */,
+				2158BAC729EB303B001300ED /* User.swift in Sources */,
+				2158BACD29EB36D0001300ED /* URLsCreator.swift in Sources */,
+				2158BAC929EB3125001300ED /* ModelsCreator.swift in Sources */,
+				21E0FB4729EC558E0004347E /* RatingsView.swift in Sources */,
+				21C09C7F29F197E400327555 /* CorrespondenceParty.swift in Sources */,
+				21C09C7229EFE61600327555 /* Game.swift in Sources */,
+				2158BAD129EB46FF001300ED /* Errors.swift in Sources */,
+				21C09C7829F0688C00327555 /* CorrespondencePartyApi.swift in Sources */,
+				2158BAA129EAF2F4001300ED /* MVVMArchitecture2AsyncAvaitApp.swift in Sources */,
+				2158BAB729EB1750001300ED /* SignInView.swift in Sources */,
+				2158BAC529EB2F50001300ED /* UserApi.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21E1289829ED751B00890AF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21E128BB29ED883200890AF6 /* UserForWidgets.swift in Sources */,
+				21E128A629ED751B00890AF6 /* ChessRatingWidgetLiveActivity.swift in Sources */,
+				21E128A829ED751B00890AF6 /* ChessRatingWidget.swift in Sources */,
+				21E128A429ED751B00890AF6 /* ChessRatingWidgetBundle.swift in Sources */,
+				21E128BF29ED8D3400890AF6 /* DecoderEncoderSupport.swift in Sources */,
+				2193AAC529F298F7001D04B4 /* PartyForWidget.swift in Sources */,
+				21D7673B29F1E84B007114F4 /* RatingEnum.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21E128AD29ED751C00890AF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21E1289B29ED751B00890AF6 /* ChessRatingWidgetExtension */;
+			targetProxy = 21E128AC29ED751C00890AF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2158BAA929EAF2F4001300ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2158BAAA29EAF2F4001300ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2158BAAC29EAF2F4001300ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MVVMArchitecture2AsyncAvait/MVVMArchitecture2AsyncAvait.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MVVMArchitecture2AsyncAvait/Preview Content\"";
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2158BAAD29EAF2F4001300ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MVVMArchitecture2AsyncAvait/MVVMArchitecture2AsyncAvait.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MVVMArchitecture2AsyncAvait/Preview Content\"";
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		21E128B029ED751C00890AF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ChessRatingWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChessRatingWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChessRatingWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21E128B129ED751C00890AF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ChessRatingWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KX8766VHZ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChessRatingWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChessRatingWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2158BA9829EAF2F4001300ED /* Build configuration list for PBXProject "MVVMArchitecture2AsyncAvait" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2158BAA929EAF2F4001300ED /* Debug */,
+				2158BAAA29EAF2F4001300ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2158BAAB29EAF2F4001300ED /* Build configuration list for PBXNativeTarget "MVVMArchitecture2AsyncAvait" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2158BAAC29EAF2F4001300ED /* Debug */,
+				2158BAAD29EAF2F4001300ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21E128B229ED751C00890AF6 /* Build configuration list for PBXNativeTarget "ChessRatingWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21E128B029ED751C00890AF6 /* Debug */,
+				21E128B129ED751C00890AF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2193AAC929F2AEFA001D04B4 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2193AACA29F2AEFA001D04B4 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2193AAC929F2AEFA001D04B4 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2158BA9529EAF2F4001300ED /* Project object */;
+}
