@@ -7,23 +7,10 @@
 
 import Foundation
 
-protocol NetworkServiceProtocol {
-    var apiModelCreator: ApiModelCreatorFromData? { get set }
-    var modelCreator: ModelCreator? { get set }
-    var urlCreator: URLsCreator? { get set }
-    var session: URLSession { get set }
-    
-    func fetchUserData(userName: String) async throws -> User?
-    func fetcRatingData(userName: String) async throws -> [Rating]?
-    func fetchAchiveData(userName: String) async throws -> [String]?
-    func fetchGames(urlString: String) async throws -> [Game]?
-    func fetchCorrespondenceParties(userName: String) async throws -> [CorrespondenceParty]?
-}
-
 class NetworkService: NetworkServiceProtocol {
-    var apiModelCreator: ApiModelCreatorFromData?
-    var modelCreator: ModelCreator?
-    var urlCreator: URLsCreator?
+    var apiModelCreator: ApiModelCreatorFromDataProtocol?
+    var modelCreator: ModelCreatorProtocol?
+    var urlCreator: URLsCreatorProtocol?
     var session = URLSession.init(configuration: .default)
     
     // MARK: - user

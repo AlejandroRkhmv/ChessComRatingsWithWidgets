@@ -21,4 +21,5 @@ enum Errors: Error {
     case errorGetCorrespondenceParty
     case errorDecodeForWidget
     case errorEncodeForWidget
+    case errorMakeUserForWidget
 }

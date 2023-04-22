@@ -24,6 +24,8 @@ struct CorrespondenceView<Model>: View where Model: CorrespondenceViewModelProto
             List(correspondenceViewModel.correspondenceParty ?? [] ) { correspondenceParty in
                 Button {
                     correspondenceViewModel.selectCorrespondencePartyForWidget(party: correspondenceParty)
+                    guard let identifier = correspondenceParty.identifier else { return }
+                    correspondenceViewModel.setIdentifierOfParty(urlString: identifier)
                     print("daily")
                 } label: {
                     VStack(alignment: .leading) {

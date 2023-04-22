@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21000FDB29F3EF6700071757 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BABF29EB2B2B001300ED /* NetworkService.swift */; };
+		21000FDC29F3EF6F00071757 /* ApiModelCreatorFromData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BACE29EB434F001300ED /* ApiModelCreatorFromData.swift */; };
+		21000FDD29F3EF7200071757 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAC229EB2DA1001300ED /* DateCreator.swift */; };
+		21000FDE29F3EF7600071757 /* ModelsCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAC829EB3125001300ED /* ModelsCreator.swift */; };
+		21000FDF29F3EF7A00071757 /* URLsCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BACC29EB36D0001300ED /* URLsCreator.swift */; };
+		21000FE029F3EF7E00071757 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAD029EB46FF001300ED /* Errors.swift */; };
+		21000FE129F3EF9400071757 /* RatingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAAE29EB0911001300ED /* RatingApi.swift */; };
+		21000FE229F3EF9700071757 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BACA29EB3195001300ED /* Rating.swift */; };
+		21000FE329F3EF9A00071757 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAC429EB2F50001300ED /* UserApi.swift */; };
+		21000FE429F3EF9D00071757 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAC629EB303B001300ED /* User.swift */; };
+		21000FE529F3EFA700071757 /* ArchiveApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106A46B29EEB7E70065C33A /* ArchiveApi.swift */; };
+		21000FE629F3EFAB00071757 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106A46D29EEC9E50065C33A /* Archive.swift */; };
+		21000FE729F3EFB200071757 /* CorrespondencePartyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C7729F0688C00327555 /* CorrespondencePartyApi.swift */; };
+		21000FE829F3EFB500071757 /* CorrespondenceParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C7E29F197E400327555 /* CorrespondenceParty.swift */; };
+		21000FE929F3EFC400071757 /* GamesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C6A29EFE2BC00327555 /* GamesApi.swift */; };
+		21000FEA29F3EFC700071757 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C7129EFE61600327555 /* Game.swift */; };
+		21000FEC29F3F05400071757 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21000FEB29F3F05400071757 /* NetworkServiceProtocol.swift */; };
+		21000FED29F3F06400071757 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21000FEB29F3F05400071757 /* NetworkServiceProtocol.swift */; };
+		21000FEF29F3F0C800071757 /* ApiModelCreatorFromDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21000FEE29F3F0C800071757 /* ApiModelCreatorFromDataProtocol.swift */; };
+		21000FF029F3F0D100071757 /* ApiModelCreatorFromDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21000FEE29F3F0C800071757 /* ApiModelCreatorFromDataProtocol.swift */; };
+		21000FF229F3F0E700071757 /* ModelCreatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21000FF129F3F0E700071757 /* ModelCreatorProtocol.swift */; };
+		21000FF429F3F0FE00071757 /* URLsCreatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21000FF329F3F0FE00071757 /* URLsCreatorProtocol.swift */; };
+		21000FF529F3F10700071757 /* URLsCreatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21000FF329F3F0FE00071757 /* URLsCreatorProtocol.swift */; };
+		21000FF629F3F10B00071757 /* ModelCreatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21000FF129F3F0E700071757 /* ModelCreatorProtocol.swift */; };
+		2100103329F474A800071757 /* ChessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2158BAB029EB091F001300ED /* ChessViewModel.swift */; };
+		2100103429F475A500071757 /* CorrespondenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C09C8029F1991C00327555 /* CorrespondenceViewModel.swift */; };
 		2106A46329EEB6C60065C33A /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106A46229EEB6C60065C33A /* ArchiveView.swift */; };
 		2106A46A29EEB7D60065C33A /* ArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106A46929EEB7D60065C33A /* ArchiveViewModel.swift */; };
 		2106A46C29EEB7E70065C33A /* ArchiveApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106A46B29EEB7E70065C33A /* ArchiveApi.swift */; };
@@ -85,6 +111,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		21000FEB29F3F05400071757 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		21000FEE29F3F0C800071757 /* ApiModelCreatorFromDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModelCreatorFromDataProtocol.swift; sourceTree = "<group>"; };
+		21000FF129F3F0E700071757 /* ModelCreatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCreatorProtocol.swift; sourceTree = "<group>"; };
+		21000FF329F3F0FE00071757 /* URLsCreatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLsCreatorProtocol.swift; sourceTree = "<group>"; };
 		2106A46229EEB6C60065C33A /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		2106A46929EEB7D60065C33A /* ArchiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewModel.swift; sourceTree = "<group>"; };
 		2106A46B29EEB7E70065C33A /* ArchiveApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveApi.swift; sourceTree = "<group>"; };
@@ -158,6 +188,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21000FF729F3F1D800071757 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				21000FEB29F3F05400071757 /* NetworkServiceProtocol.swift */,
+				21000FEE29F3F0C800071757 /* ApiModelCreatorFromDataProtocol.swift */,
+				21000FF129F3F0E700071757 /* ModelCreatorProtocol.swift */,
+				21000FF329F3F0FE00071757 /* URLsCreatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		2106A46129EEB6AC0065C33A /* ArchiveModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +359,7 @@
 		2158BAC129EB2B32001300ED /* Servises */ = {
 			isa = PBXGroup;
 			children = (
+				21000FF729F3F1D800071757 /* Protocols */,
 				2158BABF29EB2B2B001300ED /* NetworkService.swift */,
 				2158BACE29EB434F001300ED /* ApiModelCreatorFromData.swift */,
 				2158BAC229EB2DA1001300ED /* DateCreator.swift */,
@@ -557,6 +599,7 @@
 				2158BAA329EAF2F4001300ED /* ChessView.swift in Sources */,
 				2158BAC329EB2DA1001300ED /* DateCreator.swift in Sources */,
 				2106A46329EEB6C60065C33A /* ArchiveView.swift in Sources */,
+				21000FEC29F3F05400071757 /* NetworkServiceProtocol.swift in Sources */,
 				2158BAC029EB2B2B001300ED /* NetworkService.swift in Sources */,
 				2193AAC729F2ACA0001D04B4 /* MovesInGameViewModel.swift in Sources */,
 				2193AAC429F296AB001D04B4 /* PartyForWidget.swift in Sources */,
@@ -566,6 +609,7 @@
 				21C09C6D29EFE2D200327555 /* GamesForMonthViewModel.swift in Sources */,
 				2106A46A29EEB7D60065C33A /* ArchiveViewModel.swift in Sources */,
 				210BFE9D29EEFB8E00AAF4A7 /* GamesForMonthView.swift in Sources */,
+				21000FF429F3F0FE00071757 /* URLsCreatorProtocol.swift in Sources */,
 				2158BABE29EB2261001300ED /* ContainerView.swift in Sources */,
 				2158BAB129EB091F001300ED /* ChessViewModel.swift in Sources */,
 				2106A46C29EEB7E70065C33A /* ArchiveApi.swift in Sources */,
@@ -576,10 +620,12 @@
 				2158BAC929EB3125001300ED /* ModelsCreator.swift in Sources */,
 				21E0FB4729EC558E0004347E /* RatingsView.swift in Sources */,
 				21C09C7F29F197E400327555 /* CorrespondenceParty.swift in Sources */,
+				21000FF229F3F0E700071757 /* ModelCreatorProtocol.swift in Sources */,
 				21C09C7229EFE61600327555 /* Game.swift in Sources */,
 				2158BAD129EB46FF001300ED /* Errors.swift in Sources */,
 				21C09C7829F0688C00327555 /* CorrespondencePartyApi.swift in Sources */,
 				2158BAA129EAF2F4001300ED /* MVVMArchitecture2AsyncAvaitApp.swift in Sources */,
+				21000FEF29F3F0C800071757 /* ApiModelCreatorFromDataProtocol.swift in Sources */,
 				2158BAB729EB1750001300ED /* SignInView.swift in Sources */,
 				2158BAC529EB2F50001300ED /* UserApi.swift in Sources */,
 			);
@@ -589,13 +635,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21000FE829F3EFB500071757 /* CorrespondenceParty.swift in Sources */,
+				21000FDF29F3EF7A00071757 /* URLsCreator.swift in Sources */,
+				21000FDC29F3EF6F00071757 /* ApiModelCreatorFromData.swift in Sources */,
+				21000FF629F3F10B00071757 /* ModelCreatorProtocol.swift in Sources */,
 				21E128BB29ED883200890AF6 /* UserForWidgets.swift in Sources */,
+				21000FE929F3EFC400071757 /* GamesApi.swift in Sources */,
+				21000FE529F3EFA700071757 /* ArchiveApi.swift in Sources */,
+				2100103329F474A800071757 /* ChessViewModel.swift in Sources */,
+				21000FEA29F3EFC700071757 /* Game.swift in Sources */,
 				21E128A629ED751B00890AF6 /* ChessRatingWidgetLiveActivity.swift in Sources */,
+				21000FDD29F3EF7200071757 /* DateCreator.swift in Sources */,
+				21000FE029F3EF7E00071757 /* Errors.swift in Sources */,
+				21000FE329F3EF9A00071757 /* UserApi.swift in Sources */,
 				21E128A829ED751B00890AF6 /* ChessRatingWidget.swift in Sources */,
+				21000FE629F3EFAB00071757 /* Archive.swift in Sources */,
+				21000FED29F3F06400071757 /* NetworkServiceProtocol.swift in Sources */,
+				21000FDE29F3EF7600071757 /* ModelsCreator.swift in Sources */,
+				21000FF529F3F10700071757 /* URLsCreatorProtocol.swift in Sources */,
+				21000FDB29F3EF6700071757 /* NetworkService.swift in Sources */,
 				21E128A429ED751B00890AF6 /* ChessRatingWidgetBundle.swift in Sources */,
 				21E128BF29ED8D3400890AF6 /* DecoderEncoderSupport.swift in Sources */,
+				2100103429F475A500071757 /* CorrespondenceViewModel.swift in Sources */,
+				21000FE229F3EF9700071757 /* Rating.swift in Sources */,
+				21000FE429F3EF9D00071757 /* User.swift in Sources */,
 				2193AAC529F298F7001D04B4 /* PartyForWidget.swift in Sources */,
 				21D7673B29F1E84B007114F4 /* RatingEnum.swift in Sources */,
+				21000FF029F3F0D100071757 /* ApiModelCreatorFromDataProtocol.swift in Sources */,
+				21000FE129F3EF9400071757 /* RatingApi.swift in Sources */,
+				21000FE729F3EFB200071757 /* CorrespondencePartyApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,14 +7,6 @@
 
 import Foundation
 
-protocol URLsCreatorProtocol {
-    func ratingURL(userName: String) -> URL?
-    func userURL(userName: String) -> URL?
-    func archiveURL(userName: String) -> URL?
-    func gamesURL(urlString: String) -> URL?
-    func correspondenceParty(userName: String) -> URL?
-}
-
 class URLsCreator: URLsCreatorProtocol {
     
     func ratingURL(userName: String) -> URL? {

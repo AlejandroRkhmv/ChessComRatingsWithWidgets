@@ -37,7 +37,7 @@ class Dependencies {
         // MARK: - create chessViewModel
         container.register((any ChessViewModelProtocol).self) { register in
             let chessViewModel = ChessViewModel()
-            chessViewModel.networcService = (register.resolve(NetworkServiceProtocol.self) as! NetworkService)
+            chessViewModel.networkService = (register.resolve(NetworkServiceProtocol.self) as! NetworkService)
             return chessViewModel
         }
         

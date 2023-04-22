@@ -7,14 +7,6 @@
 
 import Foundation
 
-protocol ApiModelCreatorFromDataProtocol {
-    func createUserApi(from data: Data) -> UserAPI?
-    func createRatingApi(from data: Data) -> RatingAPI?
-    func createArchiveApi(from data: Data) -> ArchiveAPI?
-    func createGamesApi(from data: Data) -> GamesAPI?
-    func createCorrespondenceParty(from data: Data) -> CorrespondencePartyApi?
-}
-
 class ApiModelCreatorFromData: ApiModelCreatorFromDataProtocol {
     private let decoder = JSONDecoder()
     

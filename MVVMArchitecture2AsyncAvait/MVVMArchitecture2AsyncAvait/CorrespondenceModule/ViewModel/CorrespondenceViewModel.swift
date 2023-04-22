@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Foundation
+import WidgetKit
 
 protocol CorrespondenceViewModelProtocol: ObservableObject, AnyObject {
     
@@ -14,6 +15,7 @@ protocol CorrespondenceViewModelProtocol: ObservableObject, AnyObject {
     var correspondenceParty: [CorrespondenceParty]? { get set }
     func fetchData(userName: String) async throws 
     func selectCorrespondencePartyForWidget(party: CorrespondenceParty)
+    func setIdentifierOfParty(urlString: String)
     func unwrapText(text: String?) -> String
     func playerName(from urlString: String) -> String
     func createNeedsMovesString(from pgn: String) -> String
@@ -22,13 +24,29 @@ protocol CorrespondenceViewModelProtocol: ObservableObject, AnyObject {
 
 class CorrespondenceViewModel: CorrespondenceViewModelProtocol {
     
-    @AppStorage("dailyData", store: UserDefaults.group) var dailyData = Data()
+    @AppStorage("dailyData", store: UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")!) var dailyData = Data()
+    @AppStorage("urlOfDailyParty", store: UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")!) var urlIdentifier = String()
     var networcService: NetworkServiceProtocol?
     @Published var correspondenceParty: [CorrespondenceParty]?
     
     @MainActor
     func fetchData(userName: String) async throws {
         self.correspondenceParty = try await networcService?.fetchCorrespondenceParties(userName: userName)
+    }
+    
+    // MARK: - UPLOAD Party For widget
+    func uploadParty(userName: String) {
+        Task {
+            do {
+                try await fetchData(userName: userName)
+                
+            }
+            catch {
+                print(Errors.errorGetUser)
+            }
+        }
+        guard let party = correspondenceParty?.first(where: {$0.identifier == urlIdentifier }) else { return }
+        selectCorrespondencePartyForWidget(party: party)
     }
     
     func selectCorrespondencePartyForWidget(party: CorrespondenceParty) {
@@ -41,6 +59,12 @@ class CorrespondenceViewModel: CorrespondenceViewModelProtocol {
         let partyForWidjet = PartyForWidget(white: white, black: black, moves: moves, typeOfParty: type)
         let dailyData = DecoderEncoderSupport.encodeParty(from: partyForWidjet)
         self.dailyData = dailyData
+        // MARK: - reload widget after send type of rating
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+    
+    func setIdentifierOfParty(urlString: String) {
+        self.urlIdentifier = urlString
     }
     
     // MARK: - unwrapeText

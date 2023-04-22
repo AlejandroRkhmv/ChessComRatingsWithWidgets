@@ -8,6 +8,7 @@
 import Foundation
 
 struct PartyForWidget: Codable {
+    var identifier: String?
     var white: String?
     var black: String?
     var moves: String?

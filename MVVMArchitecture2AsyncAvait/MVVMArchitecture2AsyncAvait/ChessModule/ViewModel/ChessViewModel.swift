@@ -7,41 +7,47 @@
 
 import SwiftUI
 import Foundation
+import WidgetKit
 
 protocol ChessViewModelProtocol: ObservableObject, AnyObject {
     var user: User? { get set }
     var rating: [Rating]? { get set }
-    var networcService: NetworkServiceProtocol? { get set }
+    var networkService: NetworkServiceProtocol? { get set }
     func fetchData(userName: String) async throws
     func setTypeOfRating(type: String)
 }
 
 class ChessViewModel: ChessViewModelProtocol {
     
-    @AppStorage("user", store: UserDefaults.group) var userForWidget = Data()
-    @AppStorage("typeOfRating", store: UserDefaults.group) var typeOfRating = String()
+    @AppStorage("user", store: UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")) var userForWidget = Data()
+    @AppStorage("typeOfRating", store: UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")) var typeOfRating = String()
     
-    var networcService: NetworkServiceProtocol?
+    var networkService: NetworkServiceProtocol?
     
     @Published var user: User?
     @Published var rating: [Rating]?
     
     @MainActor
     func fetchData(userName: String) async throws {
-        self.user = try await networcService?.fetchUserData(userName: userName)
-        self.rating = try await networcService?.fetcRatingData(userName: userName)
+        print("fetch rating")
+        self.user = try await networkService?.fetchUserData(userName: userName)
+        self.rating = try await networkService?.fetcRatingData(userName: userName)
         setterUserForWidget(user: self.user, rating: self.rating)
     }
     
     func setTypeOfRating(type: String) {
         self.typeOfRating = type
         print(self.typeOfRating)
+        // MARK: - reload widget after send type of rating
+        WidgetCenter.shared.reloadAllTimelines()
     }
     
     // MARK: - set user to userFor widget
     fileprivate func setterUserForWidget(user: User?, rating: [Rating]?) {
         guard let user = user, let rating = rating else { return }
         self.userForWidget = createUserForWidget(user: user, rating: rating)
+        // MARK: - reload widget after send type of rating
+        WidgetCenter.shared.reloadAllTimelines()
     }
     
     // MARK: - create user for widget
@@ -52,6 +58,7 @@ class ChessViewModel: ChessViewModelProtocol {
     }
 }
 
-extension UserDefaults {
-  static let group = UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")!
-}
+//extension UserDefaults {
+//  static let group = UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")!
+//}
+

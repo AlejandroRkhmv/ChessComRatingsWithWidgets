@@ -9,9 +9,13 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    @AppStorage("user", store: UserDefaults.group) var userForWidget = Data()
-    @AppStorage("typeOfRating", store: UserDefaults.group) var typeOfRating = String()
-    @AppStorage("dailyData", store: UserDefaults.group) var dailyData = Data()
+    @AppStorage("user", store: UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")!) var userForWidget = Data()
+    @AppStorage("typeOfRating", store: UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")!) var typeOfRating = String()
+    @AppStorage("dailyData", store: UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")!) var dailyData = Data()
+    @AppStorage("urlOfDailyParty", store: UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")!) var urlIdentifier = String()
+    
+    let chessViewModel = ChessViewModel()
+    let correspondenceViewModel = CorrespondenceViewModel()
     
     func placeholder(in context: Context) -> SimpleEntry {
         let user = DecoderEncoderSupport.decodeUser(from: userForWidget)
@@ -48,13 +52,13 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+        print("getTimeline started")
         var entries: [SimpleEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 10 {
-            let components = DateComponents(second: hourOffset)
-            let reload = Calendar.current.date(byAdding: components, to: currentDate)!
+        for secondOffset in 0 ..< 5 {
+            let entryDate = Calendar.current.date(byAdding: .second, value: secondOffset, to: currentDate)!
             let user = DecoderEncoderSupport.decodeUser(from: userForWidget)
             let daily = DecoderEncoderSupport.decodeParty(from: dailyData)
             guard let userName = user.name,
@@ -67,12 +71,27 @@ struct Provider: TimelineProvider {
                   let black = daily.black,
                   let moves = daily.moves,
                   let typeOfparty = daily.typeOfParty else { return }
-            let entry = SimpleEntry(date: reload, user: userName, rapidRating: "\(rapidRating)", blitzRating: "\(blitzRating)", bulletRating: "\(bulletRating)", dailyRating: "\(dailyRating)", tacticRating: "\(tacticRating)", type: typeOfRating, dailyUserWhite: white, dailyUserBlack: black, moves: moves, typeOfParty: typeOfparty)
+            let entry = SimpleEntry(date: entryDate, user: userName, rapidRating: "\(rapidRating)", blitzRating: "\(blitzRating)", bulletRating: "\(bulletRating)", dailyRating: "\(dailyRating)", tacticRating: "\(tacticRating)", type: typeOfRating, dailyUserWhite: white, dailyUserBlack: black, moves: moves, typeOfParty: typeOfparty)
             entries.append(entry)
         }
-
+        
+        fetchData(userName: entries[0].user)
+        
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
+    }
+    
+    // MARK: - fetch
+    func fetchData(userName: String) {
+        Task {
+            do {
+                try await chessViewModel.fetchData(userName: userName)
+                correspondenceViewModel.uploadParty(userName: userName)
+            }
+            catch {
+                print(Errors.errorGetUser)
+            }
+        }
     }
 }
 
@@ -220,11 +239,8 @@ struct ChessRatingWidgetEntryView: View {
                 Text("Default")
             }
         }
-    }
-        
-    
+}
     // MARK: - function
-    
     func setRating(type: String) -> String {
         switch type {
         case "rapid":
@@ -254,8 +270,4 @@ struct ChessRatingWidget: Widget {
         .description("This is an user rating widget")
         .supportedFamilies([.systemMedium, .systemSmall, .systemLarge])
     }
-}
-
-extension UserDefaults {
-  static let group = UserDefaults(suiteName: "group.com.AlejandroRkhmv.MVVMArchitecture2AsyncAvait.ChessRatingWidget")!
 }
