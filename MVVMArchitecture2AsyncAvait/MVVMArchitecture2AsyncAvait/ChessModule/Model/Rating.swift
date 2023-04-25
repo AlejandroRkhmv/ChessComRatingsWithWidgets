@@ -7,7 +7,14 @@
 
 import Foundation
 
-class Rating {
+protocol RatingProtocol {
+    var title: String? { get set }
+    var logo: String? { get set }
+    var rating: Int? { get set }
+    var ratingDate: String? { get set }
+}
+
+class Rating: RatingProtocol {
     var title: String?
     var logo: String?
     var rating: Int?

@@ -14,7 +14,7 @@ protocol NetworkServiceProtocol {
     var session: URLSession { get set }
     
     func fetchUserData(userName: String) async throws -> User?
-    func fetcRatingData(userName: String) async throws -> [Rating]?
+    func fetcRatingData(userName: String) async throws -> [RatingProtocol]?
     func fetchAchiveData(userName: String) async throws -> [String]?
     func fetchGames(urlString: String) async throws -> [Game]?
     func fetchCorrespondenceParties(userName: String) async throws -> [CorrespondenceParty]?

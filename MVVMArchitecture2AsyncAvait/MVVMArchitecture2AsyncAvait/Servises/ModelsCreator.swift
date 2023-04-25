@@ -13,29 +13,19 @@ class ModelCreator: ModelCreatorProtocol {
         return user
     }
     
-    func createRapid(from ratingApi: RatingAPI) -> Rapid {
+    func createRatings(from ratingApi: RatingAPI) -> [RatingProtocol] {
+        var ratings: [RatingProtocol] = []
         let rapid = Rapid(ratingApi: ratingApi)
-        return rapid
-    }
-    
-    func createBlitz(from ratingApi: RatingAPI) -> Blitz {
         let blitz = Blitz(ratingApi: ratingApi)
-        return blitz
-    }
-    
-    func createTactic(from ratingApi: RatingAPI) -> Tactic {
         let tactic = Tactic(ratingApi: ratingApi)
-        return tactic
-    }
-    
-    func createBullet(from ratingApi: RatingAPI) -> Bullet {
         let bullet = Bullet(ratingApi: ratingApi)
-        return bullet
-    }
-    
-    func createDaily(from ratingApi: RatingAPI) -> Daily {
         let daily = Daily(ratingApi: ratingApi)
-        return daily
+        ratings.append(rapid)
+        ratings.append(blitz)
+        ratings.append(tactic)
+        ratings.append(daily)
+        ratings.append(bullet)
+        return ratings
     }
     
     func archiveGames(from archiveApi: ArchiveAPI) -> Archive {

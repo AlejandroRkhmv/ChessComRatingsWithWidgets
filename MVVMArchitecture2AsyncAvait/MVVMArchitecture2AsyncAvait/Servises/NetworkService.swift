@@ -27,8 +27,7 @@ class NetworkService: NetworkServiceProtocol {
     }
     
     // MARK: - rating
-    func fetcRatingData(userName: String) async throws -> [Rating]? {
-        var ratings = [Rating]()
+    func fetcRatingData(userName: String) async throws -> [RatingProtocol]? {
         guard let url = urlCreator?.ratingURL(userName: userName) else {
             throw Errors.badUrl
         }
@@ -36,16 +35,7 @@ class NetworkService: NetworkServiceProtocol {
         let response = try await session.data(from: url)
         
         guard let ratingAPI = apiModelCreator?.createRatingApi(from: response.0) else { return nil }
-        guard let rapid = modelCreator?.createRapid(from: ratingAPI),
-              let blitz = modelCreator?.createBlitz(from: ratingAPI),
-              let tactic = modelCreator?.createTactic(from: ratingAPI),
-              let bullet = modelCreator?.createBullet(from: ratingAPI),
-              let daily = modelCreator?.createDaily(from: ratingAPI) else { return nil }
-        ratings.append(rapid)
-        ratings.append(blitz)
-        ratings.append(tactic)
-        ratings.append(bullet)
-        ratings.append(daily)
+        guard let ratings = modelCreator?.createRatings(from: ratingAPI) else { return nil }
         return ratings
     }
     
